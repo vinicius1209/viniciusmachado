@@ -3,28 +3,120 @@
   <section class="hero is-fullheight-with-navbar is-dark">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title">
-          Hi There, I'm Vinícius.
-        </h1>
-        <h2 class="subtitle">
-          Developer, Student and Enthusiastic
-        </h2>
+        
+        <!-- WHO AM I -->
+        <div id="Who" class="content-tab">
+          <div class="columns">
+            <div class="column is-half">
+              <p class="is-active">
+                <h1 class="title is-size-2" style="margin-bottom: 3.75rem;">
+                  Hi There, I'm Vinícius.
+                </h1>
+                <h2 class="subtitle">
+                  Developer, Student and Enthusiastic
+                </h2>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /END -->  
+
+        <!-- SKILLS -->
+        <div id="Skills" class="content-tab" style="display:none">
+          <div class="columns">
+            <!--TECH-->
+            <div class="column is-half">
+              <p>
+                <h1 class="title is-size-2" style="margin-bottom: 3.75rem;">
+                  Tech Skills
+                </h1>
+                <h2 class="subtitle">
+                  Apart from the courses included in my Computer Science degree, 
+                  I've taken some of online courses such as Vue.js Complete Guide, 
+                  Python and Django Full Stack, and REST API's with Flask and Python.
+                </h2>
+              </p>
+            </div>
+            <!--SOFT-->
+            <div class="column is-half">
+              <p>
+                <h1 class="title is-size-2" style="margin-bottom: 3.75rem;">
+                  Soft Skills
+                </h1>
+                <h2 class="subtitle">
+                  Im my opnion the more you give the more you 'll receive.
+                  So i try to make a good relationshop with my teammates ever.
+                  I consider myself a very carismatic person thats love to have
+                  fun and drink a cup of coffe.
+                </h2>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /END -->   
+
+        <!-- WORKING -->
+        <div id="Working" class="content-tab" style="display:none">
+          <div class="columns">
+            <div class="column is-half">
+              <h1 class="title is-size-2" style="margin-bottom: 3.75rem;">
+                What I've been working on
+              </h1>
+              <h2 class="subtitle has-text-justified">
+                I like to think how can I solve problems aroud me using technology and developing applications.
+                Take a look at some of my applications, and companies I've dedicated my time to.
+              </h2>
+            </div>
+          </div>
+          <p>
+          </p>
+        </div>
+        <!-- /END -->           
+        
+        
       </div>
     </div>
     <div class="hero-foot">
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
           <ul>
-            <li class="is-active">
+            <li class="tab is-active" onclick="openTab(event,'Who')">
               <a>Who am I</a>
             </li>
-            <li>
+            <li class="tab" onclick="openTab(event,'Skills')">
               <a>My Skills</a>
             </li>
-            <li>
+            <li class="tab" onclick="openTab(event,'Working')">
               <a>Working on</a>
             </li>
           </ul>
         </div>
   </section>
+
+  <script type="text/javascript">
+    
+    $(document).ready(function() {
+      $(".navbar-burger").click(function() {
+          $(".navbar-burger").toggleClass("is-active");
+          $(".navbar-menu").toggleClass("is-active");
+
+      });
+    });
+
+    function openTab(evt, tabName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("content-tab");
+
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab");
+
+      for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace("is-active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " is-active";
+    }
+  </script>
 {% endblock %}
