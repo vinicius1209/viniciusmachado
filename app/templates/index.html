@@ -3,93 +3,19 @@
   <section class="hero is-fullheight-with-navbar is-dark">
     <div class="hero-body">
       <div class="container">
-        
-        <!-- WHO AM I -->
-        <div id="Who" class="content-tab">
-          <div class="columns">
-            <div class="column is-half">
-              <p class="is-active">
-                <h1 class="title is-size-2" style="margin-bottom: 3.75rem;">
-                  Hi There, I'm Vinícius.
-                </h1>
-                <h2 class="subtitle">
-                  Developer, Student and Enthusiastic
-                </h2>
-              </p>
-            </div>
-            <div class="column is-half">
 
-            </div>
-          </div>
-        </div>
+        <!-- WHO AM I -->
+        {% include 'sub/who.html' %}
         <!-- /END -->  
 
         <!-- SKILLS -->
-        <div id="Skills" class="content-tab" style="display:none">
-          <div class="columns">
-            <!--TECH-->
-            <div class="column is-half">
-              <p>
-                <h1 class="title is-size-2" style="margin-bottom: 3.75rem;">
-                  Tech Skills
-                </h1>
-                <h2 class="subtitle">
-                  Apart from the courses included in my Computer Science degree, 
-                  I've taken some of online courses such as Vue.js Complete Guide, 
-                  Python and Django Full Stack, and REST API's with Flask and Python.
-                </h2>
-                <div class="tags are-medium">
-                  <span class="tag is-dark is-light">Python</span>
-                  <span class="tag is-dark is-light">Flask</span>
-                  <span class="tag is-dark is-light">Git</span>
-                  <span class="tag is-dark is-light">Heroku</span>
-                  <span class="tag is-dark is-light">Java</span>
-                  <span class="tag is-dark is-light">Spring</span>
-                  <span class="tag is-dark is-light">Javascript</span>
-                  <span class="tag is-dark is-light">Vue.js</span>
-                  <span class="tag is-dark is-light">Bootstrap</span>
-                  <span class="tag is-dark is-light">Bulma.io</span>
-                  <span class="tag is-dark is-light">SQL</span>
-                </div>
-              </p>
-            </div>
-            <!--SOFT-->
-            <div class="column is-half">
-              <p>
-                <h1 class="title is-size-2" style="margin-bottom: 3.75rem;">
-                  Soft Skills
-                </h1>
-                <h2 class="subtitle">
-                  Im my opnion the more you give the more you 'll receive.
-                  So I try to maintain a good relationship with my teammates ever.
-                  I consider myself a very carismatic person that loves to have
-                  fun and drink a cup of coffe.
-                </h2>
-              </p>
-            </div>
-          </div>
-        </div>
+        {% include 'sub/skills.html' %}
         <!-- /END -->   
 
         <!-- WORKING -->
-        <div id="Working" class="content-tab" style="display:none">
-          <div class="columns">
-            <div class="column is-half">
-              <h1 class="title is-size-2" style="margin-bottom: 3.75rem;">
-                What I've been working on
-              </h1>
-              <h2 class="subtitle has-text-justified">
-                I like to think how can I solve problems aroud me using technology and developing applications.
-                Take a look at some of my applications, and companies I've dedicated my time to.
-              </h2>
-            </div>
-          </div>
-          <p>
-          </p>
-        </div>
+        {% include 'sub/work.html' %}
         <!-- /END -->           
-        
-        
+         
       </div>
     </div>
     <div class="hero-foot">
@@ -107,6 +33,8 @@
             </li>
           </ul>
         </div>
+      </nav>
+    </div>
   </section>
 
   <script type="text/javascript">
