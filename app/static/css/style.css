@@ -1,7 +1,7 @@
 .card{
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(204,197,185,.5);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
     -webkit-transition: all .3s ease;
 	transition: all .3s ease
 }
@@ -10,6 +10,24 @@
 	cursor: pointer;
 	-webkit-transform: translateY(4px);
 	transform: translateY(4px);
-	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+	-webkit-box-shadow: 0 2px 2px rgba(204,197,185,.5);
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1)
+}
+
+.title-work {
+    color: #363636 !important;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+	line-height: 1.125 !important;
+	margin-top: 10px !important;
+    margin-bottom: 2rem !important;
+}
+
+.subtitle-work{
+	color: #4a4a4a !important;
+}
+
+.card-image > figure > img{
+	border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }

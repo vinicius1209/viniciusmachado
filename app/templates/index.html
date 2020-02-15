@@ -2,7 +2,7 @@
 {% block content %}
   <section class="hero is-fullheight-with-navbar is-dark">
     <div class="hero-body">
-      <div class="container">
+      <div class="container" id="main">
 
         <!-- WHO AM I -->
         {% include 'sub/who.html' %}
@@ -18,23 +18,6 @@
          
       </div>
     </div>
-    <div class="hero-foot">
-      <nav class="tabs is-boxed is-fullwidth">
-        <div class="container">
-          <ul>
-            <li class="tab is-active" onclick="openTab(event,'Who')">
-              <a>Who am I</a>
-            </li>
-            <li class="tab" onclick="openTab(event,'Skills')">
-              <a>My Skills</a>
-            </li>
-            <li class="tab" onclick="openTab(event,'Working')">
-              <a>Working on</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
   </section>
 
   <script type="text/javascript">
@@ -48,16 +31,17 @@
     });
 
     function openTab(evt, tabName) {
-      var i, x, tablinks;
+      var i, x, navitems;
       x = document.getElementsByClassName("content-tab");
 
       for (i = 0; i < x.length; i++) {
           x[i].style.display = "none";
       }
-      tablinks = document.getElementsByClassName("tab");
+      
+      navitems = document.getElementsByClassName("navbar-item");
 
       for (i = 0; i < x.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace("is-active", "");
+        navitems[i].className = navitems[i].className.replace("is-active", "");
       }
       document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " is-active";
